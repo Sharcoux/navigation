@@ -11,7 +11,7 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-- Go to [this Snack](https://snack.expo.dev/@sharcoux/react-native-navigation)
+- Go to [this Snack](https://snack.expo.dev/@cantoo/react-native-navigation)
 - Edit the model to reproduce the issue
 - Save your changes and paste the link here:
 

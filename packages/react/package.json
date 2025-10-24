@@ -1,0 +1,29 @@
+{
+  "name": "@cantoo/navigation",
+  "version": "0.1.0",
+  "description": "React Universal Navigation (pure React version)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "clean": "rimraf dist",
+    "release": "release-it"
+  },
+  "keywords": [
+    "react",
+    "navigation",
+    "web"
+  ],
+  "author": "fbillioud",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16.13.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

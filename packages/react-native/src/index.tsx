@@ -1,9 +1,13 @@
 import React from 'react'
 import * as RN from 'react-native'
 
+type NamedProps = { name: string }
+type NamedChild = React.ReactElement<NamedProps>
+type NamedChildren = NamedChild | NamedChild[] | Array<NamedChild | NamedChild[]>
+
 export type Props = {
   active: string;
-  children?: React.ReactNode;
+  children?: NamedChildren;
   duration?: number;
 }
 
@@ -17,8 +21,8 @@ const Navigation = React.forwardRef<RN.View, Props>(({ active, children, duratio
   // We keep only the children of type ReactElement as other children will not be accessible anyway
   const childrenElementsArray = React.useMemo(() => {
     const childrenArray = children && Array.isArray(children) ? children : []
-    return flat(childrenArray)
-      .filter(child => child && (child as React.ReactElement).props) as Array<React.ReactElement<{ name: string}, React.ComponentType<{ name: string}>>>
+    const flatChildren = flat(childrenArray as unknown as unknown[])
+    return flatChildren.filter((child): child is NamedChild => RN.Platform.select({ default: true }) && !!child && (child as any).props && typeof (child as any).props.name === 'string')
   }, [children])
 
   // activeIndex is the slide which is expected to be displayed

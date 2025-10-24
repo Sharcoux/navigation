@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, AppRegistry, Button } from 'react-native'
-import Navigation, { Slide, asSlide } from '../src'
+import Navigation, { Slide, asSlide } from '../packages/react-native/src'
 
 const Page2 = asSlide(View, '2')
 

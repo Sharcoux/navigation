@@ -4,7 +4,7 @@ This package provide a component managing the navigation within your components.
 
 ![](example/navigation.gif)
 
-Try it [here](https://snack.expo.dev/@sharcoux/react-native-navigation)
+Try it [here](https://snack.expo.dev/@cantoo/react-native-navigation)
 
 ## Why?
 

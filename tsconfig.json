@@ -1,14 +1,13 @@
 {
+  "files": [],
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "declaration": true,
     "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -19,6 +18,8 @@
     "isolatedModules": true,
     "noEmit": false
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "example"]
+  "references": [
+    { "path": "packages/react-native" },
+    { "path": "packages/react" }
+  ]
 }
