@@ -93,7 +93,7 @@ const Navigation = React.forwardRef<HTMLDivElement, Props>(({ active, children, 
     flexShrink: 0,
     flexBasis: 'auto',
     alignItems: 'stretch',
-    overflow: targetIndex === current ? undefined : 'hidden',
+    overflow: targetIndex === current ? undefined : 'clip',
     position: 'relative',
     display: 'flex',
     flexDirection: 'row'

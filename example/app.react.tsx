@@ -14,7 +14,7 @@ const Page2 = asSlide(Page, '2')
 const App = () => {
   const [active, setActive] = React.useState(0)
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100dvh', width: '100dvw', padding: '2em', boxSizing: 'border-box' }}>
       <div style={{ display: 'flex', gap: '10px', padding: '10px', justifyContent: 'space-around' }}>
         {[0, 1, 2].map(i => (
           <button key={i} onClick={() => setActive(i)}>
